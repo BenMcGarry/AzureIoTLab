@@ -1,5 +1,5 @@
 ---
-title: Deploy the Remote Monitoring Solution Accelerator
+title: Remote Monitoring Solution Accelerator
 category: Setup
 order: 2
 ---
