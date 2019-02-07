@@ -1,14 +1,14 @@
 ---
-title: PowerBI
+title: Power BI
 category: Data
 order: 3
 ---
 
-Now we have the data all flowing through Azure, we can display the live and histotircal temperature data coming from the sensor on a PowerBI dashboard. First we will display the live data online.
+Now we have the data all flowing through Azure, we can display the live and historical temperature data coming from the sensor on a Power BI dashboard. First we will display the live data online.
 
-1. Go to the [PowerBI Website](https://powerbi.com) and sign in using the account you authorised earlier with the Stream Analytics output.
+1. Go to the [Power BI Website](https://powerbi.com) and sign in using the account you authorised earlier with the Stream Analytics output.
 
-1. In the PowerBI window, click the three lines button at the top of the left-hand menu to show the navigation pane.
+1. In the Power BI window, click the three lines button at the top of the left-hand menu to show the navigation pane.
 
 1. Click on **My Workspace** then in the main window click on **Datasets**.
 
@@ -22,23 +22,23 @@ Now we have the data all flowing through Azure, we can display the live and hist
 
 1.	In the Visualization Type drop down, choose **Line Chart**. Add an Axis with the value **EventProcessedUtcTime**. In the Values drop down, choose **Temperature** and **Humidity**. In the Time Window to Display field, choose **1 minute**. Click **Next**, give your chart a title and click **Apply**.
 
-    ![PowerBI Dashboard Config]({{ site.baseurl }}/img/powerbidashconfig.png)
+    ![Power BI Dashboard Config]({{ site.baseurl }}/img/powerbidashconfig.png)
 
 1. Add another tile but this time use a card, select **Temperature** and continue as before. You may also do the same for **Humidity** until your dashboard looks like below.
 
-    ![PowerBI Dashboard]({{ site.baseurl }}/img/powerbidash.png)powerbidashconfig.png
+    ![Power BI Dashboard]({{ site.baseurl }}/img/powerbidash.png)
 
-1. We will also need PowerBI for later on in the lab, go to the [PowerBI Download page](https://powerbi.microsoft.com/en-us/desktop/) and click **Advanced Download Options**. Download and install PowerBI Desktop.
+1. We will also need Power BI for later on in the lab, go to the [Power BI Download page](https://powerbi.microsoft.com/en-us/desktop/) and click **Advanced Download Options**. Download and install Power BI Desktop.
 
-    Once installed it will ask for you to sign in, use the same account you used for the online version of PowerBI.
+    Once installed it will ask for you to sign in, use the same account you used for the online version of Power BI.
 
 1. On the splash screen, click **Get Data**.
 
-    ![PowerBI Get Data]({{ site.baseurl }}/img/powerbigetdata.png)
+    ![Power BI Get Data]({{ site.baseurl }}/img/powerbigetdata.png)
 
 1. Click **Azure**, then choose **Azure SQL Database**. Click **Connect**.
 
-    You will need your SQL server name. **Go back to the Azure Portal** and click on **SQL Databases** in the left-hand blade. It will display your SQL Database, **Click on it** to open the SQL Database blade and it will contain the name of your SQL server as seen below. **Copy the name to the clipboard and paste it into PowerBI.**
+    You will need your SQL server name. **Go back to the Azure Portal** and click on **SQL Databases** in the left-hand blade. It will display your SQL Database, **Click on it** to open the SQL Database blade and it will contain the name of your SQL server as seen below. **Copy the name to the clipboard and paste it into Power BI.**
 
     ![SQL DB Name]({{ site.baseurl }}/img/sqldbname.png)
 
@@ -56,23 +56,23 @@ Now we have the data all flowing through Azure, we can display the live and hist
 
     On the Field menu on the right, click **EventEnqueuedUtcTime** and it should put this into the Axis box. **Click the tiny down arrow beside the field name and click the option above Date Hierarchy to remove the Day/Year/Month breakdown (if it is present)**.
 
-    ![PowerBI Sort Dates]({{ site.baseurl }}/img/removedate.png)
+    ![Power BI Sort Dates]({{ site.baseurl }}/img/removedate.png)
 
 1. In the Field area, tick **Humidity and Temperature**. They should then appear on the line graph.
 
     You should end up with a chart design that looks like this:
 
-    ![PowerBI Chart Design]({{ site.baseurl }}/img/powerbichartdesign.png)
+    ![Power BI Chart Design]({{ site.baseurl }}/img/powerbichartdesign.png)
 
     This will display a line chart that looks like this:
 
-    ![PowerBI Line Chart]({{ site.baseurl }}/img/powerbilinechart.png) 
+    ![Power BI Line Chart]({{ site.baseurl }}/img/powerbilinechart.png) 
 
     You can drag the chart around to make it larger. 
 
 In order to pull the latest data from SQL, click the Refresh button on the task bar at the top. Breathe on the sensor a couple of times, then refresh the data. You will see the lines on the chart move around from the updates coming from SQL. 
 
-If you signed in to PowerBi Desktop with the same account as PowerBI.com, you can publish this dashboard to your online workspace and share it. Click the Publish button to do that and specify My Workspace. 
+If you signed in to Power BI Desktop with the same account as PowerBI.com, you can publish this dashboard to your online workspace and share it. Click the Publish button to do that and specify My Workspace. 
 
 Once you’ve published it in PowerBI.com, you can create a historical data report and pin it to the live streaming dashboard to get a combination of the two. Have a play around and see what you can create. 
 

@@ -135,6 +135,6 @@ We will now create a SQL DB to hold all of the historic IoT data.
 
     ![SQL Database Data]({{ site.baseurl }}/img/sqldbdata.png)
 
-Now we have the data moving through Azure. We can now setup the PowerBI dashboard.
+Now we have the data moving through Azure. We can now setup the Power BI dashboard.
 
 ## [Next]({{ site.baseurl }}/03data/powerbi)

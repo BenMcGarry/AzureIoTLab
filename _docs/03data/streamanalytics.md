@@ -70,6 +70,6 @@ We want to setup a PowerBI dashboard using a live stream of data from the MXChip
 
     Now data will be sent from the MXChip directly to a live streaming feed in PowerBI.
 
-Now we will create a SQL DB for hold the historic data.
+Now we will create an Azure SQL Database for hold the historic data.
 
 ## [Next]({{ site.baseurl }}/03data/sqldb)
