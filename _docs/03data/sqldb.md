@@ -1,5 +1,5 @@
 ---
-title: SQL DB
+title: Azure SQL Database
 category: Data
 order: 2
 ---
