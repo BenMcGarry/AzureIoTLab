@@ -10,6 +10,6 @@ If you have any questions please feel free to ask your instructor. They will cov
 
 Your instructor will tell you when to proceed onto setup.
 
-    ![Solution Dashboard]({{ site.baseurl }}/img/solutiondashboard.png)
+![Solution Dashboard]({{ site.baseurl }}/img/solutiondashboard.png)
 
 ## [Start]({{ site.baseurl }}/01setup/azurepass)
