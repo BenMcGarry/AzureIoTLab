@@ -6,4 +6,4 @@ Maintained by: Ben McGarry
 
 Original Authors: Jane Pitt
 
-URL: 
+URL: https://benmcgarry.github.io/AzureIoTLab/
