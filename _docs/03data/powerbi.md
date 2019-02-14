@@ -4,19 +4,17 @@ category: Data
 order: 3
 ---
 
-Now we have the data all flowing through Azure, we can display the live and historical temperature data coming from the sensor on a Power BI dashboard. First we will display the live data online.
+Now we have the data all flowing through Azure, we can display the live and historical temperature data coming from the MXChip on a Power BI dashboard. First we will display the live data online.
 
 1. Go to the [Power BI Website](https://powerbi.com) and sign in using the account you authorised earlier with the Stream Analytics output.
 
-1. In the Power BI window, click the three lines button at the top of the left-hand menu to show the navigation pane.
+1. On the navigation menu on the left, Click on **My Workspace** then in the main window click on **Datasets**.
 
-1. Click on **My Workspace** then in the main window click on **Datasets**.
-
-    You should see listed the Output you created from Stream Analytics listed in your available Datasets. It can take a few minutes to come through, so if it's not there, wait a few more minutes and refresh the page.
+    You should see the Output you created from Stream Analytics listed in your available Datasets. It can take a few minutes to come through, so if it's not there, wait a few more minutes and refresh the page.
 
 1. When the Dataset shows, in the top right of the window click **+ Create** and choose **Dashboard**. Type in a name for your dashboard and click **Create**.
 
-1. When the dashboard has created, click the **Add Tile** button from the menu at the top of the screen. In the Select Source window select **Custom Streaming Data** and click **Next**.
+1. When the dashboard has created, click the **Add tile** button from the menu at the top of the screen. In the Select Source window select **Custom Streaming Data** and click **Next**.
 
 1. **Choose your Dataset** from the list and click **Next**.
 
@@ -28,7 +26,7 @@ Now we have the data all flowing through Azure, we can display the live and hist
 
     ![Power BI Dashboard]({{ site.baseurl }}/img/powerbidash.png)
 
-1. We will also need Power BI for later on in the lab, go to the [Power BI Download page](https://powerbi.microsoft.com/en-us/desktop/) and click **Advanced Download Options**. Download and install Power BI Desktop.
+1. Now we will use the Power BI Desktop application for the second dashboard, go to the [Power BI Download page](https://powerbi.microsoft.com/en-us/desktop/) and click **Advanced Download Options**. Download and install the Power BI Desktop application choosing **PBIDesktop_x64.msi** when prompted for which file to download.
 
     Once installed it will ask for you to sign in, use the same account you used for the online version of Power BI.
 

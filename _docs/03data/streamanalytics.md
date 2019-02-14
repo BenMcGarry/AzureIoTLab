@@ -21,11 +21,9 @@ We want to setup a PowerBI dashboard using a live stream of data from the MXChip
     - **Hosting environment**: Cloud
     - **Streaming units**: 1  
 
-    Then click **Create**.
+    ![Stream Analytics]({{ site.baseurl }}/img/streamanalytics.png)
 
-    ![Stream Analytics]({{ site.baseurl }}/img/streamanalytics.png)powerbiauth.png
-
-    When it is created you should see a screen like this:
+    Then click **Create**. When it has created go to its dashboard and you should see a screen like this:
 
     ![Stream Analytics Dashboard]({{ site.baseurl }}/img/streamanalyticsdash.png)  
 
@@ -39,13 +37,15 @@ We want to setup a PowerBI dashboard using a live stream of data from the MXChip
 
 1. Use the the following settings:
 
-    - **Output alias**: PowerBi
+    - **Output alias**: PowerBI
     - **Dataset name**: Give it a name of your choice
     - **Table name**: Give it a name of your choice 
 
     Now click **Authorize**. You will need authorise using an account with a PowerBI subscription, or alternatively, sign up for a free one using the link. **This requires a custom company email domain rather than your @outlook.com account.**
 
     ![PowerBI Authorisation]({{ site.baseurl }}/img/powerbiauth.png)
+
+    Once Authorised click **Save**
 
 1. Now you have your first output, you can go back to the Stream Analytics query and direct some data into it. Close the Outputs blade to return back to the main Stream Analytics blade.
 
@@ -64,12 +64,12 @@ We want to setup a PowerBI dashboard using a live stream of data from the MXChip
 
     Hit **Save** at the top. Once saved close the Query blade.
 
-    This is selecting all messages (*) from the DeviceTelemetry stream where the Device ID is DevKit, and directing them into your new PowerBI output. If you gave your PowerBI output an alias different to PowerBi, ensure that you use your alias in the INTO field.
+    This is selecting all messages (*) from the DeviceTelemetry stream where the ConnectionDeviceId is AZ3166, and directing them into your new Power BI output. If you gave your Power BI output an alias different to PowerBI, ensure that you use your alias in the INTO field.
 
 1. Go back to the main Stream Analaytics page and click **Start** at the top, this will start the processing. For the Job output start time ensure **Now** is selected and click **Start**. It will take a few minutes to start but you should see the status change to Running when completed.
 
-    Now data will be sent from the MXChip directly to a live streaming feed in PowerBI.
+    Data will now be sent from the MXChip directly to a live streaming feed in Power BI.
 
-Now we will create an Azure SQL Database for hold the historic data.
+Now we will create an Azure SQL Database to hold the historic data from the MXChip.
 
 ## [Next]({{ site.baseurl }}/03data/sqldb)

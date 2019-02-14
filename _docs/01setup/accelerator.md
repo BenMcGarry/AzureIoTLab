@@ -8,9 +8,11 @@ Before you can configure your IoT device, you need to deploy your Remote Monitor
 
 The **MXChip DevKit** device you use in this lab sends data to an instance of the Remote Monitoring solution accelerator. 
 
-To deploy a Remote Monitoring solution, go [here](https://www.azureiotsolutions.com/Accelerators) and log in using your Microsoft Account with an Azure subscription. 
+To deploy a Remote Monitoring solution, go to the Solution Accelerator website [here](https://www.azureiotsolutions.com/Accelerators).
 
 1. Select **Remote Monitoring** and click on the **Try Now** button. 
+
+1. **Sign in with the account you just activated your Azure Subscription on.**
 
 1. Use the following information for the Remote Monitoring solution:
     - **Deployment name**: Give it a name
@@ -18,12 +20,12 @@ To deploy a Remote Monitoring solution, go [here](https://www.azureiotsolutions.
     - **Deployment options**: C# Microservices
     - **Azure Location**: West Europe 
 
-    Click **Create** at the bottom of the page and wait for the Remote Monitoring solution to provision. When the provisioning is complete, Click **Go to your solution accelerator** to open the solution dashboard. If you are prompted for any permissions, just accept them.
+    Click **Create** at the bottom of the page and the Remote Monitoring solution will start to provision. This will take around 30 minutes so we will continue with the setup. **Please leave the tab open**.
+    
+When the provisioning is eventually complete, Click **Go to your solution accelerator** to open the solution dashboard. If you are prompted for any permissions, just accept them.
 
-    ![Remote Monitoring Solution Dashboard]({{ site.baseurl }}/img/solutiondashboard.png)
+![Remote Monitoring Solution Dashboard]({{ site.baseurl }}/img/solutiondashboard.png)
 
-
-We have now setup the Solution Accelerator, now we will configure the **MXChip DevKit**.
-
+While the Solution Accelerator is provisioning, we will configure the **MXChip** and check back later.
 
 ## [Next]({{ site.baseurl }}/01setup/device)

@@ -15,15 +15,21 @@ We will now create a SQL DB to hold all of the historic IoT data.
     - **Resource group**: Select your existing IoT resource group
     - **Select source**: Leave this at **Blank database**
 
-    Select server and click **Create a new server** at the top. Fill in server name as well as admin login and password. Leave all the other settings at default then click **Select**.
+    Click **Server** and click **Create a new server** at the top. Use the following details for the server:
 
-    Under **Pricing tier**, select **Basic** then click **Apply** leaving all settings at default.
+    - **Server name**: Give your server a name
+    - **Server admin login**: Enter a username
+    - **Password**: Enter a password
+    - **Confirm password**: Confirm the above password
+    - **Location**: West Europe
 
-    The click **Create**. The SQL instance will now deploy, it will take a few minutes.
+    **Leave all other settings at default** and click **Select**.
 
-1. You will need to define the database schema to match up with the data coming from the sensor. Firstly, take a sample of the data coming from the sensor so you know what schema  you need. To do this return to the Resource Group and click on the Stream Analytics job which you created earlier. 
+    Then click **Create**. The SQL Database will now deploy, it will take a few minutes.
 
-1. Click on the DeviceTelemetry input, then click the Sample Data Link.
+1. You will need to define the database schema to match up with the data coming in from the MXChip. Firstly, take a sample of the data coming from the sensor so you know what schema you need. To do this return to the Resource Group and click on the Stream Analytics job which you created earlier. 
+
+1. On the left navigation click **Inputs** then next to DeviceTelemetry click **Sample data**.
 
     ![Device Telemetry]({{ site.baseurl }}/img/devicetele.png)
 
@@ -39,9 +45,9 @@ We will now create a SQL DB to hold all of the historic IoT data.
 
    ![SQL Connect]({{ site.baseurl }}/img/sqlconnect.png)
 
-1. In the list of Connect options, choose **Azure**. This should expand your Azure subscription and show you the database you have just created. **Click your database in the list** and in the boxes beneath, enter the username and password you set up when you created the SQL database. **Check the "Remember password" box** and **click Connect**.
+1. In the list of Connect options, choose **Azure**. This should expand your Azure subscription and show you the database you have just created. **Click your database in the list** and in the boxes beneath, enter the username and password you set up when you created the SQL database. **Check the "Remember Password" box** and **click Connect**.
 
-    You may get a message asking you to add a firewall rule to your database to allow client access.  Just click OK, Visual Studio will do this for you automatically.
+    You may get a message asking you to add a firewall rule to allow client access. **Just click Ok**, Visual Studio will do this for you automatically.
 
     ![Firewall Prompt]({{ site.baseurl }}/img/firewall.png)
 
@@ -53,9 +59,9 @@ We will now create a SQL DB to hold all of the historic IoT data.
 
     ![SQL Table Designer]({{ site.baseurl }}/img/tabledesigner.png)
 
-1. **Follow these instructions exactly!** You need to define your table schema in line with the data that is coming from the sensor. 
+1. **Follow these instructions exactly!** You need to define your table schema in line with the data that is coming from the MXChip. 
 
-    The first line will contain the field name id and will have a little key beside it. Click into the box and change the field name to ConnectionDeviceId. Change the Data Type in the drop-down to nvarchar(MAX). This should be the data type for all of the fields. Continue down the list to create fields with exactly the names as follows:
+    The first line will contain the field name id and will have a little key beside it. Click into the box and change the field name to **Temperature**. Change the Data Type in the drop-down to **decimal(18,0) however change the numbers to (6,2)**. Continue down the list to create fields with exactly the names as follows:
 
     ```
     Temperature			    decimal(6,2)
@@ -76,7 +82,7 @@ We will now create a SQL DB to hold all of the historic IoT data.
 
     It will just say DECIMAL with no bracket. Add the (6,2) after the word DECIMAL in the T-SQL window and it will update the drop down in the table above. 
 
-    When you have created all of your fields, right-click on the ConnectionDeviceId line and click Remove Primary Key. The little picture of the key should disappear.
+    When you have created all of your fields, right-click on the Temperature line and click Remove Primary Key. The little picture of the key should disappear.
 
     When you've finished, your table design should look **exactly** as below:
 
@@ -97,7 +103,7 @@ We will now create a SQL DB to hold all of the historic IoT data.
 1. **Pick SQL Database** from the list. When the New output blade opens, Use the following settings. Call it Database.
 
     - **Outbase alias**: Database
-    - **Select SQL Database from your subscriptions**: Select your Azure subscription
+    - **Select SQL Database from your subscriptions**
     - **Subscription**: Your Azure Pass subscription
     - **Database**: Pick your database from the drop-down menu.
     - **Username**: Your database username
@@ -108,7 +114,7 @@ We will now create a SQL DB to hold all of the historic IoT data.
 
     Leave everything else at default and click **Save**. It will now create and test the output.
 
-1. Return to the Stream Analytics blade and click on the Query box to amend your query again. Add the following lines after the existing query **exactly** as they appear below.
+1. Return to the Stream Analytics overview and click **Query** in the left-hand blade to amend your query again. Add the following lines after the existing query **exactly** as they appear below.
 
     ```
     SELECT
@@ -127,7 +133,7 @@ We will now create a SQL DB to hold all of the historic IoT data.
 
 1. **Click Save** to update your query, then click **Overview**. Click **Start** to start your stream Analytics jobs again. This will take a few minutes.
 
-1. When the Stream Analytics job is showing as Running, we can check that data is reaching your SQL database. **Return to Visual Studio**, click View, then click SQL Server Object Explorer. You should see your new table listed on the left hand side, **dbo.table**.
+1. When the Stream Analytics job is showing as Running, we can check that data is reaching your SQL database. **Return to Visual Studio 2017**, You should see your new table listed on the left hand side under your Azure SQL Database, **dbo.table**. You may need to refresh the view at the top.
 
 1. **Right-click on your table and click View Data**. This will open your table in Data view. You see some rows populated with data. If not, click the Refresh button a couple of times, it can take a few minutes for sensor data to reach the table.
 
