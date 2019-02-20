@@ -20,6 +20,8 @@ Now we will program the device to get it talking to IoT Hub.
 
 1. Click F1 again, type and select **Azure IoT Device Workbench: Upload Device Code**. It will start to compile and upload the code to MXChip.
 
+    **If you get any firewall prompts, allow them.**
+
     The MXChip will reboot and start running the code. In Visual Studio you should see the device turn from blue to green in the Azure IoT Hub Devices area, if it doesnt hit the refresh icon next to the title text.
 
 ## [Next]({{ site.baseurl }}/02build/testprog)
