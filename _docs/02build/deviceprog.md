@@ -14,6 +14,8 @@ Now we will program the device to get it talking to IoT Hub.
 
 1. Click **F1** to open the command palette, type and select **Azure IoT Device Workbench: Configure Device Settings**, then select **Config Device Connection String** then **Select IoT Hub Device Connection String**. This will configure your device for Azure.
 
+1. **If prompted, enter the device connection string you saved to Notepad earlier**
+
 1. On the MXChip when prompted in the Visual Studio Code UI at the bottom right, hold down **button A**, push and release the **reset** button, and then release **button A**. Your MXChip will enter configuration mode and save the connection string.
 
 1. Click F1 again, type and select **Azure IoT Device Workbench: Upload Device Code**. It will start to compile and upload the code to MXChip.
