@@ -4,7 +4,7 @@ category: Setup
 order: 5
 ---
 
-We now need to the IoT device provisioned and talking to Azure.
+We now need to get the IoT device provisioned and talking to Azure.
 
 1. In Visual Studio Code, in the bottom left corner look for **"Azure IoT Hub Devices"**. Click it then select **"Set IoT Hub Connection String"**.
 
