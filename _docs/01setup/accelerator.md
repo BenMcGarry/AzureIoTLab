@@ -8,7 +8,7 @@ Before you can configure your IoT device, you need to deploy your Remote Monitor
 
 The **MXChip DevKit** device you use in this lab sends data to an instance of the Remote Monitoring solution accelerator. 
 
-To deploy a Remote Monitoring solution, go to the Solution Accelerator website [here](https://www.azureiotsolutions.com/Accelerators).
+To deploy a Remote Monitoring solution, **go to the Solution Accelerator website [here](https://www.azureiotsolutions.com/Accelerators)**.
 
 1. Select **Remote Monitoring** and click on the **Try Now** button. 
 
